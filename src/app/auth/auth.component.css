@@ -1,0 +1,104 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #e0e7ef, #f6f9fc);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-box {
+  background: #ffffff;
+  padding: 60px 70px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 95%;
+  transition: all 0.3s ease;
+}
+
+.toggle-buttons {
+  display: flex;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  color: #333;
+  transition: 0.3s;
+}
+
+.toggle-buttons button.active {
+  background-color: #446d9e;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 14px 0;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #446d9e;
+  box-shadow: 0 0 5px rgba(68, 109, 158, 0.3);
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  width: 100%;
+  background-color: #446d9e;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e4c73;
+}
+.volver-inicio {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.volver-inicio button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volver-inicio button:hover {
+  background-color: #c8c8c8;
+}

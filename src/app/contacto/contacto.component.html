@@ -1,0 +1,35 @@
+<div class="contacto-container">
+  <h2 class="titulo">Centro de Ayuda y Soporte</h2>
+
+  <div class="contacto-content">
+    <!-- Sección FAQ con toggle -->
+    <div class="faq-section">
+      <div *ngFor="let faq of faqs; let i = index" class="faq-block">
+        <button class="faq-item" (click)="toggleFaq(i)">
+          {{ faq.pregunta }}
+        </button>
+        <div class="faq-respuesta" *ngIf="faq.abierto">
+          {{ faq.respuesta }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="form-section">
+      <h3>Formulario de contacto</h3>
+      <form (submit)="enviarFormulario()">
+        <input type="text" placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required />
+        <input type="email" placeholder="Correo electrónico" [(ngModel)]="email" name="email" required />
+        <textarea placeholder="Mensaje" [(ngModel)]="mensaje" name="mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <!-- Botón para volver -->
+      <div class="volver-main">
+        <a routerLink="/">
+          <button type="button">← Volver al inicio</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
