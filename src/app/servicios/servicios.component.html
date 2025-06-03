@@ -1,0 +1,25 @@
+<div class="servicios-container">
+  <h2 class="titulo">Servicios</h2>
+
+  <div class="item" *ngFor="let servicio of servicios; let i = index">
+    <div class="item-header" (click)="toggle(i)">
+      <span class="numero">{{ servicio.numero }}</span>
+      <span class="titulo-item">{{ servicio.titulo }}</span>
+      <span class="icono">&#10148;</span>
+    </div>
+
+    <div class="item-body" *ngIf="servicio.abierto">
+      <div class="contenido">
+        <img *ngIf="servicio.imagen" [src]="servicio.imagen" alt="Imagen" />
+        <div class="texto">
+          <p *ngFor="let punto of servicio.detalles">• {{ punto }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón con routerLink -->
+  <div class="boton-volver">
+     <a routerLink="/" class="btn-volver">← Regresar</a>
+  </div>
+</div>

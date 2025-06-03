@@ -1,0 +1,121 @@
+.detalles-container {
+  background-color: #e8eff7;
+  padding: 100px 120px;
+  border-radius: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.detalles-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  max-width: 1900px;
+  width: 100%;
+}
+
+/* COLUMNA IZQUIERDA */
+.detalles-texto {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+  padding-right: 50px;
+}
+
+.detalles-texto h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  background-color: white;
+  padding: 16px 30px;
+  border-radius: 14px;
+  display: inline-block;
+  margin: 0;
+}
+
+.intro {
+  font-size: 2.4rem;
+  border-top: 4px solid black;
+  padding-top: 25px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.info-box {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.icono {
+  width: 65px;
+  height: 65px;
+}
+
+.info-box h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* BOTÓN ABAJO */
+.btn-volver {
+  margin-top: 10px; /* Antes: 60px → Subimos el botón */
+  align-self: flex-start;
+  padding: 18px 36px;
+  border: 3px solid #1a1a1a;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* COLUMNA DERECHA - IMAGEN */
+.detalles-imagen {
+  flex: 1 1 50%; /* Más ancho del espacio disponible */
+  position: relative;
+  align-self: flex-start;
+  margin-top: 210px; /* Ligeramente más baja */
+}
+
+.detalles-imagen img {
+  width: 120%; /* Más ancho que el contenedor */
+  height: auto;
+  max-height: 1200px; /* Más altura para ocupar mayor espacio vertical */
+  border-radius: 16px;
+  object-fit: cover;
+  transform: translateX(-10%); /* Centra visualmente al crecer horizontalmente */
+}
+
+
+
+.texto-overlay {
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 20px 28px;
+  border-radius: 14px;
+  max-width: 90%;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
