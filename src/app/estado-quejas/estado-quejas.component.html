@@ -1,0 +1,43 @@
+<nav class="header-nav">
+  <div class="logo">SERVICONTROL</div>
+  <ul class="nav-links">
+    <li><a routerLink="/quejas">Presentación de Quejas</a></li>
+    <li><a routerLink="/estado" class="activo">Estado de Quejas</a></li>
+    <li><a routerLink="/gestion">Gestión</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/">Cerrar Sesión</a></li>
+  </ul>
+</nav>
+
+<div class="contenedor-tabla">
+  <h1>Estado de Quejas y Seguimiento</h1>
+  <p>Consulta el <b>estado</b> de tus quejas y <b>recibe actualizaciones</b> en tiempo real.</p>
+
+  <input type="text" [(ngModel)]="filtro" placeholder="Buscar por número, empresa o estado..." class="busqueda" />
+
+  <table>
+    <thead>
+      <tr>
+        <th># Número</th>
+        <th>Fecha de Presentación</th>
+        <th>Empresa Responsable</th>
+        <th>Estado</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let queja of quejasFiltradas">
+
+        <td>{{ queja.numero }}</td>
+        <td>{{ queja.fecha }}</td>
+        <td>{{ queja.empresa }}</td>
+        <td>
+          <span class="estado" [ngClass]="queja.estadoClase">{{ queja.estado }}</span>
+        </td>
+        <td>
+          <span class="accion" [ngClass]="queja.accionClase">{{ queja.accion }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

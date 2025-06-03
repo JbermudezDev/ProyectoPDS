@@ -7,7 +7,12 @@ import { IndexComponent } from './index/index.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { AuthComponent } from './auth/auth.component';
-import { ContactoComponent } from './contacto/contacto.component'; 
+import { ContactoComponent } from './contacto/contacto.component';
+import { QuejasComponent } from './quejas/quejas.component';
+import { EstadoQuejasComponent } from './estado-quejas/estado-quejas.component';
+import { GestionQuejasComponent } from './gestion-quejas/gestion-quejas.component';
+import { RegistrarRespuestaComponent } from './registrar-respuesta/registrar-respuesta.component';
+import { DashboardQuejasComponent } from './dashboard-quejas/dashboard-quejas.component'; 
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { ContactoComponent } from './contacto/contacto.component';
     DetallesComponent,
     ServiciosComponent,
     AuthComponent,
-    ContactoComponent
+    ContactoComponent,
+    QuejasComponent,
+    EstadoQuejasComponent,
+    GestionQuejasComponent,
+    RegistrarRespuestaComponent,
+    DashboardQuejasComponent
   ],
   imports: [
     BrowserModule,

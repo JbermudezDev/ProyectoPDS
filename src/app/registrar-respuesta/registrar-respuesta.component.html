@@ -1,0 +1,59 @@
+<nav class="header-nav">
+  <div class="logo">SERVICONTROL</div>
+  <ul class="nav-links">
+    <li><a routerLink="/quejas">Presentación de Quejas</a></li>
+    <li><a routerLink="/estado">Estado de Quejas</a></li>
+    <li><a routerLink="/gestion">Gestión</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/">Cerrar Sesión</a></li>
+  </ul>
+</nav>
+
+<div class="registro-container">
+  <h1>Registrar Respuesta</h1>
+  <p>Llena el siguiente formulario para responder a una queja.</p>
+
+  <form (ngSubmit)="enviarRespuesta()" class="respuesta-form">
+    <div class="campo">
+      <label>ID de la Queja</label>
+      <input type="text" [(ngModel)]="queja.id" name="id" required />
+    </div>
+
+    <div class="campo">
+      <label>Empresa</label>
+      <input type="text" [(ngModel)]="queja.empresa" name="empresa" required />
+    </div>
+
+    <div class="campo">
+      <label>Descripción de la Queja</label>
+      <textarea [(ngModel)]="queja.descripcion" name="descripcion" required></textarea>
+    </div>
+
+    <div class="campo">
+      <label>Respuesta</label>
+      <textarea [(ngModel)]="respuesta" name="respuesta" placeholder="Escribe aquí tu respuesta..." required></textarea>
+    </div>
+
+   <div class="campo">
+  <label>Adjuntar archivo</label>
+  <div class="file-upload">
+    <input type="file" id="fileInput" hidden />
+    <button type="button" onclick="document.getElementById('fileInput').click()">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path
+          stroke="#ffffff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125M17 15V18M17 21V18M17 18H14M17 18H20"
+        />
+      </svg>
+      Añadir Archivo
+    </button>
+  </div>
+</div>
+
+
+    <button type="submit" class="btn-enviar">Enviar Respuesta</button>
+  </form>
+</div>

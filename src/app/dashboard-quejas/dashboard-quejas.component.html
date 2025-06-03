@@ -1,0 +1,56 @@
+<nav class="header-nav">
+  <div class="logo">SERVICONTROL</div>
+  <ul class="nav-links">
+    <li><a routerLink="/quejas">Presentación de Quejas</a></li>
+    <li><a routerLink="/estado">Estado de Quejas</a></li>
+    <li><a routerLink="/gestion">Gestión</a></li>
+    <li><a routerLink="/dashboard" class="activo">Dashboard</a></li>
+    <li><a routerLink="/">Cerrar Sesión</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-container">
+  <h1>Dashboard de Quejas</h1>
+  <p>Resumen general del estado de las quejas recibidas por las empresas prestadoras de servicios.</p>
+
+  <div class="metricas-grid">
+    <div class="tarjeta">
+      <h2>Total Quejas</h2>
+      <p>{{ totalQuejas }}</p>
+    </div>
+    <div class="tarjeta tarjeta-verde">
+      <h2>Resueltas</h2>
+      <p>{{ resueltas }}</p>
+    </div>
+    <div class="tarjeta tarjeta-amarilla">
+      <h2>Pendientes</h2>
+      <p>{{ pendientes }}</p>
+    </div>
+    <div class="tarjeta tarjeta-roja">
+      <h2>Vencidas</h2>
+      <p>{{ vencidas }}</p>
+    </div>
+  </div>
+
+  <div class="tabla-empresas">
+    <h2>Quejas por Empresa</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Empresa</th>
+          <th>Total</th>
+          <th>Resueltas</th>
+          <th>Pendientes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of empresas">
+          <td>{{ e.nombre }}</td>
+          <td>{{ e.total }}</td>
+          <td>{{ e.resueltas }}</td>
+          <td>{{ e.pendientes }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

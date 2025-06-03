@@ -1,0 +1,123 @@
+body {
+  background-color: #eaf1f8;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dce9f9;
+  padding: 1rem 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #2a5bd7;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a.activo,
+.nav-links a:hover {
+  color: #2a5bd7;
+  font-weight: bold;
+}
+
+.contenedor-tabla {
+  max-width: 1000px;
+  background: white;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.busqueda {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f0f4f8;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.9rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.estado {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.pendiente {
+  background-color: #478de0;
+}
+
+.resuelta {
+  background-color: #4caf50;
+}
+
+.revision {
+  background-color: #e0a800;
+}
+
+.accion {
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.link {
+  color: #2a5bd7;
+  cursor: pointer;
+}
+
+.verde {
+  background-color: #c8f7c5;
+  color: #2b7a2f;
+}
+
+.rojo {
+  background-color: #ffcdd2;
+  color: #c62828;
+}

@@ -1,0 +1,51 @@
+<nav class="header-nav">
+  <div class="logo">SERVICONTROL</div>
+  <ul class="nav-links">
+    <li><a routerLink="/quejas">Presentación de Quejas</a></li>
+    <li><a routerLink="/estado">Estado de Quejas</a></li>
+    <li><a routerLink="/gestion" class="activo">Gestión</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/">Cerrar Sesión</a></li>
+  </ul>
+</nav>
+
+
+<div class="gestion-container">
+  <div class="encabezado">
+    <h1>Panel de Gestión para Empresas</h1>
+    <p>Sección para que las empresas registren respuestas.<br>Historial de quejas y métricas de desempeño.</p>
+    <button class="btn-registrar" routerLink="/registrar-respuesta">Registrar Respuesta</button>
+
+  </div>
+
+  <div class="contenido">
+    <div class="historial">
+      <h2>Historial de Quejas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Queja</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let q of quejas">
+            <td>{{ q.id }}</td>
+            <td>{{ q.fecha }}</td>
+            <td>{{ q.descripcion }}</td>
+            <td><span class="estado" [ngClass]="q.estadoClase">{{ q.estado }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="metricas">
+      <h2>Métricas de Desempeño</h2>
+      <p><b>Quejas Activas</b><br>{{ quejasActivas }}</p>
+      <p><b>Quejas Resueltas</b><br>{{ quejasResueltas }}</p>
+      <p><b>Tiempo Promedio de Respuesta</b><br>{{ tiempoPromedio }} días</p>
+    </div>
+  </div>
+</div>
