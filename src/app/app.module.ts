@@ -13,6 +13,8 @@ import { EstadoQuejasComponent } from './estado-quejas/estado-quejas.component';
 import { GestionQuejasComponent } from './gestion-quejas/gestion-quejas.component';
 import { RegistrarRespuestaComponent } from './registrar-respuesta/registrar-respuesta.component';
 import { DashboardQuejasComponent } from './dashboard-quejas/dashboard-quejas.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { DashboardQuejasComponent } from './dashboard-quejas/dashboard-quejas.co
     DashboardQuejasComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
