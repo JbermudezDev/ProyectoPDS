@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class QuejaService {
-  private apiUrl = 'http://localhost:8080/api/documentos';
+  private apiUrl = 'https://proyectopds-x3tk.onrender.com/api/documentos';
 
   constructor(private http: HttpClient) {}
 
