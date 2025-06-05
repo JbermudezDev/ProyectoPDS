@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AuthComponent {
   modo: 'login' | 'registro' = 'login';
+
+  constructor(private authService: AuthService) {}
 
   loginData = {
     email: '',
@@ -20,12 +23,24 @@ export class AuthComponent {
   };
 
   login() {
-    // Aquí va el llamado al servicio para login
-    console.log('Login con:', this.loginData);
+    this.authService.login(this.loginData.email, this.loginData.password).subscribe({
+      next: response => {
+        console.log('Login exitoso:', response);
+      },
+      error: error => {
+        console.error('Error al hacer login:', error);
+      }
+    });
   }
 
   registrar() {
-    // Aquí va el llamado al servicio para registrar
-    console.log('Registro con:', this.registroData);
+    this.authService.register(this.registroData.nombre, this.registroData.email, this.registroData.password).subscribe({
+      next: response => {
+        console.log('Registro exitoso:', response);
+      },
+      error: error => {
+        console.error('Error al registrar:', error);
+      }
+    });
   }
 }
